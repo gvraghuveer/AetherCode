@@ -147,6 +147,9 @@ export class GeminiService {
           }
         }
       }
+      if (error.message?.includes('429')) {
+        throw new Error('API Quota Exceeded (429): You have used up your free Gemini API requests for today. Please wait a bit or upgrade your API tier on Google AI Studio.');
+      }
       throw error; // Re-throw original or fallback error
     }
   }
