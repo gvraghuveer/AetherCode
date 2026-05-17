@@ -49,6 +49,11 @@ A beautiful, animated, built-in VS Code webview featuring three specialized dash
 - **🌳 Tree** — A visual reasoning tree displaying exactly what AetherCode is "thinking" right now.
 - **🧠 Memory** — A stat-tracking dashboard displaying learned error patterns, overall agent accuracy, and active project context.
 
+<p align="center">
+  <img src="media/screenshot1.png" alt="AetherCode Chat Interface" width="45%" />
+  <img src="media/screenshot2.png" alt="AetherCode Tree Reasoning" width="45%" />
+</p>
+
 ---
 
 ## 🚀 Getting Started
