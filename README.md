@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="media/icon.png" alt="AetherCode Logo" width="120" />
+
 # ⚡ AetherCode
 
 ### The Autonomous MERN Stack Engineer for VS Code
