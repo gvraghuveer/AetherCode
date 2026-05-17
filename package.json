@@ -1,0 +1,59 @@
+{
+  "name": "aethercode",
+  "displayName": "AetherCode - Autonomous AI Engineer",
+  "description": "Self-improving multi-agent AI coding agent with tree reasoning and persistent memory",
+  "version": "0.1.0",
+  "publisher": "gvraghuveer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gvraghuveer/AetherCode.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Programming Languages", "Debuggers"],
+  "activationEvents": ["onStartupFinished", "workspaceContains:package.json"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "aethercode.setApiKey", "title": "AetherCode: Set Gemini API Key" },
+      { "command": "aethercode.openChat", "title": "AetherCode: Open AI Assistant" },
+      { "command": "aethercode.debugCurrentFile", "title": "AetherCode: Debug Current File" },
+      { "command": "aethercode.refactorCurrentFile", "title": "AetherCode: Refactor Current File" },
+      { "command": "aethercode.analyzeAlgorithm", "title": "AetherCode: Analyze Algorithm" }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "aethercode", "title": "AetherCode", "icon": "media/icon.svg" }
+      ]
+    },
+    "views": {
+      "aethercode": [
+        { "type": "webview", "id": "aethercode.sidebar", "name": "AI Assistant" }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "18.x",
+    "@types/diff": "^5.2.3",
+    "typescript": "^5.3.3",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "sqlite3": "^5.1.7",
+    "diff": "^5.2.0",
+    "lodash": "^4.17.21",
+    "uuid": "^9.0.1",
+    "@types/uuid": "^9.0.8"
+  }
+}
